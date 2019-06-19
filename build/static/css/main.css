@@ -1086,13 +1086,6 @@ main {
   }
 }
 
-.portfolio .secret img {
-  width: auto !important;
-  max-width: 15.75rem;
-  height: auto !important;
-  max-height: 6.625rem;
-}
-
 .portfolio__about-list {
   margin: 0;
   padding: 0;

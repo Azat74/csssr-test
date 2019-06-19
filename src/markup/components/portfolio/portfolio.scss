@@ -58,12 +58,7 @@
             top: auto;
             right: auto;
         }
-        img {
-            width: auto !important;
-            max-width: rem(252);
-            height: auto !important;
-            max-height: rem(106);
-        }
+
     }
     &__about-list {
         @include list-reset;
