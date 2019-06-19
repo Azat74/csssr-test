@@ -1,0 +1,6 @@
+mixin graph(data = ['0%', '100%'])
+    +b.graph()&attributes(attributes)
+        block
+        each item in data
+            +e.point
+                span=item

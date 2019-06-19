@@ -1,0 +1,5 @@
+mixin pretty-checkbox(data = 'default')
+    label.pretty-checkbox()&attributes(attributes)
+        block
+        input.pretty-checkbox__input(type='checkbox' checked=data.checked)
+        span.pretty-checkbox__name!= data.title

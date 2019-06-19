@@ -7,3 +7,16 @@
 // Var for using custom font
 $font-1: 'Open Sans', Helvetica, Arial, sans-serif;
 */
+
+@include font-face('PT Sans', '../fonts/ptsans/regular', normal, normal, $exts: ttf);
+@include font-face('PT Sans', '../fonts/ptsans/bold', 700, normal, $exts: ttf);
+@include font-face('PT Sans', '../fonts/ptsans/italic', normal, italic, $exts: ttf);
+@include font-face('PT Sans', '../fonts/ptsans/bold-italic', 700, italic, $exts: ttf);
+
+@include font-face('Courier New', '../fonts/courier-new/regular', normal, normal, $exts: ttf);
+@include font-face('Courier New', '../fonts/courier-new/bold', 700, normal, $exts: ttf);
+@include font-face('Courier New', '../fonts/courier-new/italic', normal, italic, $exts: ttf);
+@include font-face('Courier New', '../fonts/courier-new/bold-italic', 700, italic, $exts: ttf);
+
+$pt: 'PT Sans', sans-serif;
+$cn: 'Courier New', sans-serif;

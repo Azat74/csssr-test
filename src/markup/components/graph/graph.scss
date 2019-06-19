@@ -1,0 +1,138 @@
+.graph {
+    position: relative;
+
+    display: flex;
+
+    font-size: rem(13);
+    font-weight: bold;
+    line-height: normal;
+    
+    border-top: 2.5px solid #000000;
+
+    @include below($t) {
+        flex-direction: column;
+
+        border-top: none;
+        border-left: 2.5px solid #000000;
+    }
+    &:before, &:after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 2px;
+        height: rem(24);
+
+        background-color: #000000;
+
+        @include below($t) {
+            width: rem(24);
+            height: 2px;
+        }
+    }
+    &:after {
+        right: 0;
+        left: auto;
+
+        @include below($t) {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__point {
+        position: relative;
+
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 1;
+        padding-top: rem(26);
+
+        @include below($t) {
+            padding-top: 0;
+            padding-left: rem(26);
+            margin-bottom: rem(10);
+        }
+        &:not(:first-child):not(:last-child) {
+            &:before {
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: block;
+                width: 2px;
+                height: rem(10);
+
+                background-color: #000000;
+
+                @include below($t) {
+                    width: rem(10);
+                    height: 2px;
+                }
+            }
+        }
+
+        &.js-active {
+            &:after {
+                content: '';
+
+                position: absolute;
+                top: rem(-20);
+                left: -6.9px;
+
+                border: 8px solid transparent;
+                border-top: 12px solid #000000;
+
+                @include below($t) {
+                    top: -7px;
+                    left: -15px;
+
+                    border: 8px solid transparent;
+                    border-left: 12px solid #000000;
+                }
+            }
+            &:last-child {
+                &:after {
+                    right: -7px;
+                    left: auto;
+                }
+            }
+        }
+        span {
+            display: inline-block;
+            max-width: rem(170);
+
+        }
+        &:last-child {
+            justify-content: flex-end;
+
+            text-align: right;
+
+            @include below($t) {
+                justify-content: flex-start;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &:not(.js-active) {
+        .graph__point:first-child {
+            &:after {
+                content: '';
+
+                position: absolute;
+                top: rem(-20);
+                left: -6.9px;
+
+                border: 8px solid transparent;
+                border-top: 12px solid #000000;
+            }
+        }
+
+    }
+}

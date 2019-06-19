@@ -16,11 +16,8 @@ html(lang='ru')
     include ../components/head/head
 
     body
-        +header()
 
         block content
-
-        +footer()
 
         script(src='%=static=%js/vendor%=min=%.js')
         script(src='%=static=%js/main%=hash=%%=min=%.js')

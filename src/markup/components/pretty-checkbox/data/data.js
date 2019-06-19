@@ -1,0 +1,21 @@
+var data = {prettyCheckbox: [
+    {title: 'БЭМ/OOCSS', checked: true},
+    {title: 'Pug (Jade)', checked: true},
+    {title: 'Stylys/LESS/SASS', checked: true},
+    {title: 'Работаю с SVG', checked: true},
+    {title: 'Верстаю семантично', checked: true},
+    {title: 'Accessibility (A11Y)', checked: true},
+    {title: 'ES2015/ES2016', checked: true},
+    {title: 'Gulp/GRUNT', checked: true},
+    {title: 'Webpack', checked: true},
+    {title: 'Дружу с WebGL', checked: false},
+    {title: 'jQuery', checked: true},
+    {title: 'Знаю/изучаю Angular', checked: false},
+    {title: 'Знаю/изучаю React', checked: true},
+    {title: 'Знаю/изучаю Node.js', checked: false},
+    {title: 'Использую Git', checked: true},
+    {title: 'С глазомером всё ок', checked: true},
+    {title: 'Читаю <a href="http://blog.csssr.ru/" target="_blank">blog.csssr.ru</a> ', checked: true},
+    {title: 'Я ленивый(-ая)', checked: true},
+    {title: 'У меня хороший английский', checked: false}
+]}

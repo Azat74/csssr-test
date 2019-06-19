@@ -1,0 +1,18 @@
+.custom-textarea {
+    box-sizing: content-box;
+    min-height: 140px;
+    padding: 0;
+    padding-top: 0;
+    padding-top: 9px;
+    padding-bottom: 40px;
+
+    font-family: $cn;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 59px;
+
+    border: none;
+    background: none;
+    background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSI1OSIgdmlld0JveD0iMCAwIDEgNTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjEiIHk9IjU5IiB3aWR0aD0iMSIgaGVpZ2h0PSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTgwIDEgNTkpIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K");
+
+}

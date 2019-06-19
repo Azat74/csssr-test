@@ -1,3 +1,15 @@
 // @import 'components/_template/_template.scss';
+
+@import 'components/wrapper/wrapper';
+
+@import 'components/data-field/data-field';
+@import 'components/pretty-checkbox/pretty-checkbox';
+@import 'components/graph/graph';
+@import 'components/custom-textarea/custom-textarea';
+@import 'components/radio-group/radio-group';
+@import 'components/secret/secret';
+
+
+@import 'components/portfolio/portfolio';
 @import 'components/header/header';
 @import 'components/footer/footer';

@@ -1,0 +1,1 @@
+var data = {custom-textarea: {}}

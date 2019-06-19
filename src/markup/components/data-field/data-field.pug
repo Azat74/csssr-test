@@ -1,0 +1,6 @@
+mixin data-field(data)
+    +b.LABEL.data-field()&attributes(attributes)
+        block
+        span.data-field__title=data.title
+        .data-field__input-container
+            input.data-field__input(value=data.value)

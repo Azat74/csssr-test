@@ -1,0 +1,60 @@
+.data-field {
+    display: flex;
+    align-items: flex-end;
+
+    line-height: normal;
+
+    @include below($t) {
+        display: block;
+    }
+    &__title {
+        flex-shrink: 0;
+        padding-right: rem(17);
+
+        font-size: rem(22);
+        font-weight: bold;
+    }
+    &__input-container {
+        position: relative;
+
+        flex-grow: 1;
+        padding-bottom: rem(8);
+        &:after {
+            content: '';
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 2px;
+            // background-image: url('%=static=%assets/portfolio/line.png');
+            background-color: $font-black;
+            background-size: cover;
+        }
+    }
+    
+    &__input {
+        width: 100%;
+        height: 100%;
+        padding-right: rem(14);
+        padding-left: rem(14);
+
+        font-family: $cn;
+        font-size: rem(30);
+        font-weight: 400;
+        line-height: normal;
+
+        border: none;
+        background: none;
+
+        @include below($t) {
+            padding-right: 0;
+            padding-left: 0;
+
+            font-size: rem(20);
+        }
+    }
+}

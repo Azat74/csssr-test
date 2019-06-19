@@ -8,4 +8,95 @@
 
 html, body {
     height: 100%;
+    font-family: $pt;
+    color: $font-black;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    background-color: #797979;
+    @include between (1025px, 1279px) {
+        font-size: 1.56vw;
+    }
+    @include between (769px, 1023px) {
+        font-size: 2vw;
+    }
+    @include below (767px) {
+        font-size: 5vw;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input, select, textarea {outline:none;}
+input:active, select:active, textarea:active {outline:none;}
+input:focus, select:focus,textarea:focus {outline:none;}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    box-shadow: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+input[type=number] {
+    appearance: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+
+main {
+    background-image: url('%=static=%assets/main/bg.png');
+    background-size: cover;
+    width: rem(1000);
+    max-width: 100%;
+    min-height: rem(1900);
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: rem(62);
+    padding-bottom: rem(62);
 }

@@ -1,0 +1,12 @@
+mixin radio-group(data = [])
+    +b.radio-group()&attributes(attributes)
+        block
+        - let i = 0;
+        each item in data
+            - i++;
+            label.radio-group__item
+                if i === 2
+                    input(type='radio' name='test' checked).radio-group__input
+                else
+                    input(type='radio' name='test').radio-group__input
+                span.radio-group__name=item

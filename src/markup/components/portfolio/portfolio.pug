@@ -1,0 +1,45 @@
+include ../logo/logo
+include ../secret/secret
+include ../data-field/data-field
+include ../pretty-checkbox/pretty-checkbox
+include ../graph/graph
+include ../custom-textarea/custom-textarea
+include ../radio-group/radio-group
+
+mixin portfolio(data)
+    +b.portfolio()&attributes(attributes)
+        block
+        .wrapper
+            +e.SECTION.head
+                +logo
+                +secret
+            +e.H1.title
+                img(src='%=static=%img/assets/portfolio/portfolio.png')
+            +e.data-fields
+                each item in dataField
+                    +data-field(item).portfolio__data-field
+            +e.SECTION.about-section
+                +e.H2.checkboxes-title Расскажите о себе чекбоксами
+                p.portfolio__about-description Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+                +e.UL.about-list
+                    each item in prettyCheckbox
+                        li.portfolio__about-point
+                            +pretty-checkbox(item).portfolio__about-checkbox
+            +e.SECTION.js-section
+                +e.H2.js-title Уровень владения JavaScript
+                +graph([
+                    'Не владею',
+                    'Использую готовые решения',
+                    'Использую готовые решения и умею их переделывать',
+                    'Пишу сложный JS с нуля'
+                ])(lvl='2').portfolio__js-graph
+            +e.SECTION.writing-section
+                +e.H2.writing-title Расскажите о себе словами
+                p.portfolio__writing-description Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидайте от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будет добавляться автоматически.
+                +custom-textarea.portfolio__custom-textarea Будет интересно получить новый опыт работы, прокачаться именно как фронтенд разработчик, учавствовать в поистине интересных проектах.
+            +e.SECTION.future-section
+                +e.H2.future-title Какие у вас планы на будущее?
+                p.portfolio__future-description Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+                +radio-group(['Верстать', 'Прокачиваться в JS', 'Менеджерство', 'Другое'])
+            +e.date-block
+                +data-field({title: 'Дата заполнения', value: '19.06.2019'}).portfolio__date-field
